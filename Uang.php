@@ -47,14 +47,16 @@
 
 class ATM {
 
-    public function setNamaPemilik()
+    private $Nama= "";
+
+    public function setNamaPemilik($NamaOrang)
     {
-        $this->setNamaPemilik='Aldi Safrudin';
+       return $this->Nama = $NamaOrang;
     }
 
     public function getNamaPemilik()
     {
-        return $this->setNamaPemilik;
+        return $this->Nama;
     }
  
     // private $nama;
@@ -82,7 +84,7 @@ class ATM {
 
 $atm = new ATM();
 
-$atm->setNamaPemilik("Aldi Safrudin");
+$atm->setNamaPemilik("Aldop Safrudin", "Azharai");
 
 echo "Nama Pemilik ATM :" . $atm->getNamaPemilik() . '<br>';
 echo 'setorTunai : ' .$atm->setorTunai(100) . '<br>';
