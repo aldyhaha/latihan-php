@@ -14,15 +14,5 @@ class persegi_panjang {
         return $a+$b;
     }
 }
- 
-
-class soal {
-  function nomor($dua)
-  {
-    echo $dua * $sepuluh;
-  }
-  
-}
-
 
 ?>
