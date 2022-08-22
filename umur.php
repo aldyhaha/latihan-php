@@ -8,8 +8,11 @@ class orang
 {
     function umur($taun)
     {
+        if ($taun >=0) {
         if (is_numeric($taun)) {
-        if ($taun <= 10) {
+        if ($taun <= 5) {
+            $taun = "Balita";
+        } elseif ($taun <= 10) {
             $taun = "Anak Kecil";
         } elseif ($taun <= 17) {
             $taun = "Remaja";
@@ -17,16 +20,35 @@ class orang
             $taun = "Dewasa";
         }
         return $taun;
+
+
+
     }else
-     {             
-       //Bagian ini akan dijalankan jika tipe data argumen bukan angka
-       return "Tipe data argumen harus berupa angka";
-    
-     }       
+    {             
+      //Bagian ini akan dijalankan jika tipe data argumen bukan angka
+      return "Tipe data argumen harus berupa angka";
+   
+    }   
+
+
+
+
+    }else
+    {             
+      //Bagian ini akan dijalankan jika tipe data argumen bukan angka
+      return "Umur Tidak Boleh Kurang Dari Nol";
+   
+    }
+
+
+
+
+   
+
         
     
 }
 }
 
 $orang = new orang();
-echo $orang->umur("abvbf");
+echo $orang->umur("1");
