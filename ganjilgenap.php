@@ -3,7 +3,7 @@
 class Arit{
     function bilangan($nomor)
     {
-         if($nomor%3==0)
+         if($nomor%2==0)
     
      {
         $nomor="Bilangan Genap";
@@ -14,6 +14,6 @@ class Arit{
     }
 }
 
-$Arit= new Arit(5);
-echo $Arit->bilangan(5);
+$Arit= new Arit();
+echo $Arit->bilangan(4);
 ?>

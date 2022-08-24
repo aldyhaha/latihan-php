@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
         <head>
@@ -10,87 +10,90 @@
           </head>
         <body>
     </body>
-</html> -->
+</html> 
 
 
 
-
-<!-- // class uang
-// {
+<?php
+ class uang
+ {
 
    
-//     function duit($sisa)
-//     {
-//         if(is_numeric($sisa)){
-//         if($sisa >=0 ){
-//             $sisa = "Aldi Hemat";
-//     } elseif ($sisa <=0 ){
-//             $sisa = "Aldi Pemboros";
-//     }
-//      return $sisa;
-// } else
-// {             
-//   //Bagian ini akan dijalankan jika tipe data argumen bukan angka
-//   return "Tipe data argumen harus berupa angka";
+     function duit($sisa)
+     {
+         if(is_numeric($sisa)){
+         if($sisa >=0 ){
+             $sisa = "Aldi Hemat";
+     } elseif ($sisa <=0 ){
+             $sisa = "Aldi Pemboros";
+     }
+      return $sisa;
+ } else
+ {          
+   //Bagian ini akan dijalankan jika tipe data argumen bukan angka
+   return "Tipe data argumen harus berupa angka";
 
-// }   
-//     }
-// }
+ }   
+     }
+ }
 
-// $uang = new uang();
-// echo $uang->duit(-3); -->
-
-
+ $uang = new uang();
+ echo $uang->duit(6); 
 
 
-<?php 
 
-class ATM {
 
-    private $Nama= "";
+?>
 
-    public function setNamaPemilik($NamaOrang)
-    {
-       return $this->Nama = $NamaOrang;
-    }
+<?php
+ class ATM {
 
-    public function getNamaPemilik()
-    {
-        return $this->Nama;
-    }
+     private $Nama= "";
+
+     public function setNamaPemilik($NamaOrang)
+     {
+        return $this->Nama = $NamaOrang;
+     }
+
+     public function getNamaPemilik()
+     {
+         return $this->Nama;
+     }
  
-    // private $nama;
+      //private $nama;
 
-    private $saldo = 0; // -> properti
+     private $saldo = 0;  //properti
 
-    public function setorTunai(int $jumlah) {
-        $this->saldo = $this->saldo + $jumlah;
+     public function setorTunai(int $jumlah) {
+         $this->saldo = $this->saldo + $jumlah;
 
-        return $jumlah;
-    }
+         return $jumlah;
+     }
 
-    public function tarikTunai(int $jumlah)
-    {
-        $this->saldo = $this->saldo - $jumlah;
+     public function tarikTunai(int $jumlah)
+     {
+         $this->saldo = $this->saldo - $jumlah;
 
-        return $jumlah;
-    }
+         return $jumlah;
+     }
 
-    public function lihatSaldo()
-    {
-        return $this->saldo;
-    }
-}
+     public function lihatSaldo()
+     {
+         return $this->saldo;
+     }
+ }
 
-$atm = new ATM();
+ $atm = new ATM();
 
-$atm->setNamaPemilik("Aldop Safrudin", "Azharai");
+ $atm->setNamaPemilik("Aldop Safrudin", "Azharai");
 
-echo "Nama Pemilik ATM :" . $atm->getNamaPemilik() . '<br>';
-echo 'setorTunai : ' .$atm->setorTunai(100) . '<br>';
-echo 'lihatSaldo : ' .$atm->lihatSaldo() . '<br>';
-echo 'setorTunai : ' .$atm->setorTunai(200) . '<br>';
-echo 'lihatSaldo : ' .$atm->lihatSaldo() . '<br>';
+ echo "Nama Pemilik ATM :" . $atm->getNamaPemilik() . '<br>';
+ echo 'setorTunai : ' .$atm->setorTunai(100) . '<br>';
+ echo 'lihatSaldo : ' .$atm->lihatSaldo() . '<br>';
+ echo 'setorTunai : ' .$atm->setorTunai(200) . '<br>';
+ echo 'lihatSaldo : ' .$atm->lihatSaldo() . '<br>';
 
-echo 'tarikTunai : ' .$atm->tarikTunai(50) . '<br>';
-echo 'lihatSaldo : ' .$atm->lihatSaldo() . '<br>';
+ echo 'tarikTunai : ' .$atm->tarikTunai(50) . '<br>';
+ echo 'lihatSaldo : ' .$atm->lihatSaldo() . '<br>';
+
+ ?>

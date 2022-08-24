@@ -51,4 +51,4 @@ class orang
 }
 
 $orang = new orang();
-echo $orang->umur("1");
+echo $orang->umur("4");
