@@ -12,9 +12,6 @@ class Arit {
     function tambah() {
         $this->hasil = $this->tambah1 + $this->tambah2;
     }
-    function hasil() {
-        return $this->hasil;
-    }
     function kurang() {
         $this->hasil = $this->tambah1 - $this->tambah2;
     }
@@ -23,6 +20,9 @@ class Arit {
     }
     function kali() {
         $this->hasil = $this->tambah1 * $this->tambah2;
+    }
+    function hasil() {
+        return $this->hasil;
     }
 }
 
