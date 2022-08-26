@@ -51,7 +51,7 @@ $data_barang = [
 
  $new_data_barang1 = (array_map(function ($item){
   if ($item ["harga"]>2000) {
-    return $item ["harga"];
+    return $item ;
   }
   }, $data_barang1));
    (array_filter($data_barang1, function ($item) {

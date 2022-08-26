@@ -4,7 +4,8 @@ class Arit {
     public $tambah2;
     public $hasil;
     
-
+// Dijalankan saat Ada sebuah object yang di Instens yakni ketika 
+// perintah new di jalankan
     function __construct($hasil1, $hasil2) {
         $this->tambah1 = $hasil1;
         $this->tambah2 = $hasil2;
