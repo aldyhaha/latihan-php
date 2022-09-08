@@ -5,8 +5,4 @@ $username   = 'root';
 $password   = '';
 $dbname     = 'belajar_database';
 
-$db = mysqli_connect($host, $username, $password, $dbname);
-
-if ($db) {
-    echo "database terhubung";
-}
+$db = mysqli_connect('localhost', 'root', '', 'belajar_database');
