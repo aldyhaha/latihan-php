@@ -1,5 +1,5 @@
 <?php
-if (isset($_GET['id'])) {
+if (!empty($_GET['id'])) {
     $roles_id = $_GET['id'];
 }
 include "koneksi.php";
@@ -9,22 +9,30 @@ $result = mysqli_fetch_array($query);
 
 
 
-
-<html>
-
-<head>
-    <title>DETAIL ROLES</title>
-</head>
+<!DOCTYPE html>
+<html lang="en">
 
 <body>
-    <tr>
-        <td size="90">ROLES ID</td>
-        <td>: <?php echo $result['id'] ?></td>
-    </tr>
-    <tr>
-        <td size="90">NAMA ROLES</td>
-        <td>: <?php echo $result['nama'] ?></td>
-    </tr>
+    <?php
+    if ($result) :
+    ?>
+        <h2>DETAIL ROLES</h2>
+        <table>
+            <tr>
+                <td>ROLES ID</td>
+                <td>: <?php echo $result['id'] ?></td>
+            </tr>
+            <tr>
+                <td>NAMA ROLES</td>
+                <td>: <?php echo $result['nama'] ?></td>
+            </tr>
+        <?php
+    else :
+        echo "LU OLANG NYARI YANG GAK ADA DATA";
+    endif;
+        ?>
+
+        </table>
 </body>
 
 </html>

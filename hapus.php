@@ -3,15 +3,19 @@ if (isset($_GET['hapus'])) {
     $hapus = $_GET['hapus'];
 }
 include "koneksi.php";
-$query = mysqli_query($db, "DELETE * FROM roles='$hapus'");
-$result = mysqli_fetch_array($query);
 
-if (!empty($hapus) && $hapus != "") {
-    $hapus = "DELETE FROM roles WHERE id='$hapus'";
-    $sql = mysqli_query($db, $hapus);
-    if ($sql) {
-        echo header("Location: table.php ");
-    } else {
-        echo "data gagal dihapus";
+$query = "SELECT * FROM roles WHERE id='$hapus'";
+$kirim_mysql = mysqli_query($db, $query);
+$hasil = mysqli_fetch_array($kirim_mysql);
+if ($hasil) {
+    if (!empty($hapus) && $hapus != "") {
+        $query = "DELETE FROM roles WHERE id='$hapus'";
+        $hasil = mysqli_fetch_array($kirim_mysql);
+        $sql = mysqli_query($db, $query);
+        if ($sql) {
+            echo "DATA BERHASIL DIHAPUS";
+        }
     }
+} else {
+    echo "DATA GAGAL DIHAPUS";
 }
